@@ -1,0 +1,29 @@
+{
+  "name": "Zhener",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Tyler Reitz <tdreitz@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "prepostcss": "rm -rf prod/*.css.{map}",
+    "pug": "./node_modules/.bin/pug -P src/pug/index.pug -o prod",
+    "postcss": "postcss src/postcss/index.css -o prod/style.css",
+    "build": "yarn run pug && yarn run postcss"
+  },
+  "devDependencies": {
+    "postcss": "^5.2.16",
+    "postcss-cli": "^3.0.0",
+    "postcss-cssnext": "^2.10.0",
+    "postcss-extend": "^1.0.5",
+    "postcss-import": "^9.1.0",
+    "postcss-pxtorem": "^4.0.0",
+    "postcss-typescale": "^0.1.5",
+    "precss": "^1.4.0",
+    "pug": "^2.0.0-beta11",
+    "pug-cli": "^1.0.0-alpha6",
+    "rucksack-css": "^0.9.1",
+    "stylefmt": "^5.3.0",
+    "stylelint": "^7.9.0",
+    "stylelint-config-standard": "^16.0.0"
+  }
+}

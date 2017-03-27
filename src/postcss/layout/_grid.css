@@ -1,0 +1,11 @@
+@supports (display: grid) {
+  .jsh-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 30px;
+  }
+
+  .jsh-grid--item__left {
+    grid-column: 2 / span 5;
+  }
+}

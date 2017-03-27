@@ -1,0 +1,325 @@
+:root {
+  /*--color-primary-light: #33afb3;*/
+  /*--color-primary-dark: #264d4e;*/
+}
+/****************************
+ * RESET
+ ****************************/
+/**
+ * HTML5 Reset
+ * We have learned much from/been inspired by/taken code where offered from:
+ * Eric Meyer                  :: http://meyerweb.com
+ * HTML5 Doctor                :: http://html5doctor.com
+ * and the HTML5 Boilerplate   :: http://html5boilerplate.com
+ */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+main, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+html {
+  box-sizing: border-box;
+  overflow-y: scroll;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+body {
+  line-height: 1;
+}
+*, *:before, *:after {
+  position: relative;
+  box-sizing: inherit;
+}
+img, object, embed {
+  max-width: 100%;
+  height: auto;
+}
+blockquote, q {
+  quotes:none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+  border-bottom: 0.0625rem dotted;
+  cursor: help;
+}
+i, em {
+  font-style: italic;
+}
+b, strong {
+  font-weight: bold;
+}
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: inherit;
+  font: 100%;
+}
+th {
+  font-weight: bold;
+  vertical-align: bottom;
+}
+td {
+  font-weight: normal;
+  vertical-align: top;
+}
+input, select {
+  vertical-align: middle;
+}
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box
+}
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-search-results-button, input[type=search]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+button {
+  height: auto;
+  padding: 0;
+  background: transparent;
+  outline: none;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+}
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+
+  a {
+
+  }
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: pre-line;
+  word-wrap: break-word;
+}
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif;
+}
+/****************************
+ * BASE - TYPE
+ ****************************/
+/**
+ * Pseudo
+ */
+::-moz-selection {
+  background: #999;
+  color: #fff;
+  text-shadow: none;
+}
+::selection {
+  background: #999;
+  color: #fff;
+  text-shadow: none;
+}
+/**
+ * General
+ */
+html {
+  font-size: 100%;
+}
+body {
+  background: #fff;
+  color: #2C3E50;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 0.0625rem 0.0625rem 0.0625rem rgba(get-color(black), 0.004);
+}
+a {
+  color: #ff5e48
+}
+a:hover, a:focus, a:active {
+  color: var(--color-primary-dark);
+}
+a:focus {
+  outline: none;
+}
+/**
+ * Vertical Rythym Helpers
+ */
+.vr--half { margin: 8px 0; margin: 0.5rem 0; }
+.vr, h1, h2, h3, h4, h5, h6, p, blockquote { margin: 16px 0; margin: 1rem 0; }
+.vr--double { margin: 32px 0; margin: 2rem 0; }
+/**
+ * Headlines
+ */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+
+  a {
+    color: #2C3E50;
+  }
+}
+h1, .h1 { font-size: 3.125rem }
+h2, .h2 { font-size: 1.875rem }
+h3, .h3 { font-size: 1.125rem }
+h4, .h4 { font-size: 0.9375rem }
+h5, .h5 { font-size: 0.8125rem }
+h6, .h6 { font-size: 0.75rem }
+/**
+ * Text Components
+ */
+p, dl, address {
+  font-size: 1em;
+  line-height: 1;
+}
+p, li, dt, dd {
+  font-weight: normal;
+  font-style: normal;
+}
+li {
+  line-height: 1;
+}
+/****************************
+ * BASE - FORM ELEMENTS
+ ****************************/
+/**
+ * Default Styles
+ */
+input[type="text"], input[type="time"], input[type="url"], input[type="email"], input[type="number"], input[type="password"], input[type="button"], input[type="submit"], textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+input[type="text"], input[type="time"], input[type="url"], input[type="email"], input[type="number"], input[type="password"], select, textarea {
+  width: 100%;
+  padding: 0.5em 1em;
+  margin: 0;
+  border-radius: 0;
+  border: 0.0625rem solid #333;
+  outline: none;
+  color: #eee
+}
+input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #eee;
+  color: #2C3E50;
+}
+/**
+ * Placeholders
+ */
+input[type="text"], input[type="time"], input[type="url"], input[type="email"], input[type="number"], input[type="password"], select, textarea {
+  &:placehoder-shown, &::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder {
+    color: #2C3E50;
+  }
+}
+input[type="text"]:focus&:placehoder-shown, input[type="time"]:focus&:placehoder-shown, input[type="url"]:focus&:placehoder-shown, input[type="email"]:focus&:placehoder-shown, input[type="number"]:focus&:placehoder-shown, input[type="password"]:focus&:placehoder-shown, select:focus&:placehoder-shown, textarea:focus&:placehoder-shown, input[type="text"]:focus&::-webkit-input-placeholder, input[type="time"]:focus&::-webkit-input-placeholder, input[type="url"]:focus&::-webkit-input-placeholder, input[type="email"]:focus&::-webkit-input-placeholder, input[type="number"]:focus&::-webkit-input-placeholder, input[type="password"]:focus&::-webkit-input-placeholder, select:focus&::-webkit-input-placeholder, textarea:focus&::-webkit-input-placeholder, input[type="text"]:focus&::-moz-placeholder, input[type="time"]:focus&::-moz-placeholder, input[type="url"]:focus&::-moz-placeholder, input[type="email"]:focus&::-moz-placeholder, input[type="number"]:focus&::-moz-placeholder, input[type="password"]:focus&::-moz-placeholder, select:focus&::-moz-placeholder, textarea:focus&::-moz-placeholder, input[type="text"]:focus&:-ms-input-placeholder, input[type="time"]:focus&:-ms-input-placeholder, input[type="url"]:focus&:-ms-input-placeholder, input[type="email"]:focus&:-ms-input-placeholder, input[type="number"]:focus&:-ms-input-placeholder, input[type="password"]:focus&:-ms-input-placeholder, select:focus&:-ms-input-placeholder, textarea:focus&:-ms-input-placeholder {
+  color: #ff5e48;
+}
+/* Add the correct appearance, but also adjust the height to fit with our input fields. */
+/* This only matters for apple devices (height) */
+select {
+  background: #fff;
+  height: 1.875rem;
+}
+/* Make sure we are not adding the select height to multi select */
+select[multiple] {
+  height: auto;
+}
+/* Styles relevant to checkboxes */
+input[type="checkbox"] {
+  vertical-align: bottom;
+}
+/* Styles relevant to radio buttons */
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+label {
+  color: #eee;
+  font-weight: 600;
+}
+/**
+ * Browser Specific
+ */
+/* Remove extra spacing that Firefox adds to buttons */
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0
+}
+/* Remove spinner from type="number" */
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+@supports ((display: -ms-grid) or (display: grid)) {
+  .jsh-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[12];
+        grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 1.875rem;
+  }
+
+  .jsh-grid--item__left {
+    -ms-grid-column-span: 5;
+    -ms-grid-column: 2;
+        grid-column: 2 / span 5;
+  }
+}
+.btn {
+  margin: 16px 0;
+  margin: 1rem 0;
+  padding: 0.75rem 1.5rem;
+  padding: .75rem 1.5rem;
+  border: 0.0625rem solid #ff5e48;
+  color: #ff5e48;
+  text-transform: uppercase;
+  font-weight: 700
+}
+.btn:hover {
+  color: #fff;
+  background-color: #ff5e48;
+}
+.full-bleed {
+  padding: 32px 0;
+  padding: 2rem 0;
+  background-color: rgb(74, 195, 208);
+}
+
+/*# sourceMappingURL=style.css.map */

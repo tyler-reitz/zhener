@@ -1,0 +1,103 @@
+/****************************
+ * BASE - TYPE
+ ****************************/
+
+/**
+ * Pseudo
+ */
+
+::selection {
+  background: var(--gray);
+  color: var(--white);
+  text-shadow: none;
+}
+
+/**
+ * General
+ */
+
+html {
+  font-size: var(--html-font-size);
+}
+
+body {
+  background: var(--white);
+  color: var(--black);
+  font-family: var(--font-default);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 1px 1px 1px rgba(get-color(black), 0.004);
+}
+
+a {
+  color: var(--color-primary);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--color-primary-dark);
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+/**
+ * Vertical Rythym Helpers
+ */
+.vr--half { margin: 0.5rem 0; }
+.vr { margin: 1rem 0; }
+.vr--double { margin: 2rem 0; }
+
+/**
+ * Headlines
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: var(--line-short);
+  @extend .vr;
+
+  a {
+    color: var(--black);
+  }
+}
+
+h1, .h1 { font-size: 50px }
+h2, .h2 { font-size: 30px }
+h3, .h3 { font-size: 18px }
+h4, .h4 { font-size: 15px }
+h5, .h5 { font-size: 13px }
+h6, .h6 { font-size: 12px }
+
+
+/**
+ * Text Components
+ */
+
+h1, h2, h3, h4, h5, h6, p, blockquote {
+  @extend .vr
+}
+
+p,
+dl,
+address {
+  font-size: 1em;
+  line-height: 1;
+}
+
+p,
+li,
+dt,
+dd {
+  font-weight: normal;
+  font-style: normal;
+}
+
+li {
+  line-height: 1;
+}
